@@ -1,3 +1,11 @@
+# NOTE
+
+This has been forked from the original repo because I need the rotated font to have "Rotated" suffix as its font name to be able to use [this KOReader patch](https://gist.github.com/starryalley/8501e0218d25c49b9c1aa537399b4185). 
+
+Unfortunately it looks like [KOReader](https://koreader.rocks/) uses many rules to determine the "font name" of a font. It can be family name, or can be "Preferred Family Name" in TTF Names (as seen in fontforge). Simply renaming "fontname" and "fullname" is not enough. That's why I made this small change.
+
+It's an awesome work from the original author. I've been enjoying this to read many Traditional Chinese books in vertical layout in [KOReader](https://koreader.rocks/).
+
 # tategakifont
 
 縦書きの対応がないシステムで縦書きがほしい時にフォントを９０度回して画面も９０度回したら縦書きだ。
