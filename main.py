@@ -106,6 +106,14 @@ def main():
         font.fontname+="-Rotated"
     if font.fullname is not None:
         font.fullname+=" Rotated"
+    # family name can be used to determine the font name in Koreader
+    if font.familyname is not None:
+        font.familyname+=" Rotated"
+    # clear SFNT names (TTF Names) because Koreader may also use Preferred Family in different lanagues to be the name of the font, but we need "Rotated" suffix instead to trigger our patch
+    # see https://gist.github.com/starryalley/8501e0218d25c49b9c1aa537399b4185
+    if font.sfnt_names:
+        print("original SFNT names:", font.sfnt_names)
+        font.sfnt_names = ()
 
     fill_tagmap(font)
 
